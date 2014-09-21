@@ -1,5 +1,5 @@
 # Two functions that are used to create a special object
-# that stores a matrix and cache its mean
+# that stores a matrix and caches its mean
 
 # A function that creates a special "matrix", which is
 # really a list containing a function to
@@ -7,7 +7,6 @@
 # 2. get the value of the matrix
 # 3. set the value of the inverse
 # 4. get the value of the invverse.
-
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
     set <- function(y) {
@@ -28,7 +27,6 @@ makeCacheMatrix <- function(x = matrix()) {
 # and skips the computations. Otherwise, it calculates
 # the inverse of the data and sets the value of the inverse
 # in the cache via the setinv function.
-
 cacheSolve <- function(x, ...) {
     inv <- x$getinv()
     if(!is.null(inv)) {
